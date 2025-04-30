@@ -477,7 +477,7 @@ _zip_checkcons(zip_t *za, zip_cdir_t *cd, zip_error_t *error) {
         _zip_dirent_finalize(&temp);
     }
 
-    return 0
+    return (max - min) < ZIP_INT64_MAX ? (zip_int64_t)(max - min) : ZIP_INT64_MAX;
 }
 
 
